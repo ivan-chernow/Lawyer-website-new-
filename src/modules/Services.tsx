@@ -3,9 +3,9 @@
 import React from "react";
 import Button from "@/components/Button/Button";
 import { ServicesData, servicesData } from "@/data/services";
+import Line from "@/components/Line";
 import useStore from "@/store/ModalCall";
 import { motion } from "motion/react";
-import Line from "@/components/Line";
 import HoveredStyles from "@/components/hoveredStyles";
 
 const Services = () => {

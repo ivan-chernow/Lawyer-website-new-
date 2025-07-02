@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import HoveredStyles from "@/components/hoveredStyles";
 import Link from "next/link";
 import useMaterials from "@/store/Materials";
+import Image from "next/image";
 
 const Materials = () => {
   const {
@@ -52,10 +53,12 @@ const Materials = () => {
             >
               <Link href={`/materials/${material.id}`}>
                 <div className="relative">
-                  <img
+                  <Image
                     src={material.img}
                     alt=""
                     className="h-[270px] object-cover mb-[24px] bg-cover w-[415px] "
+                    width={415}
+                    height={270}
                   />
                   {hovered === index && (
                     <motion.div
@@ -66,10 +69,12 @@ const Materials = () => {
                     >
                       <HoveredStyles className="bg-white" />
                       <div className="p-[15px] bg-white rounded-lg shadow-lg">
-                        <img
-                          src="/img/Materials/show.png"
-                          alt="img"
-                          className="object-cover"
+                        <Image
+                          src={material.img}
+                          alt=""
+                          className="h-[270px] object-cover mb-[24px] bg-cover w-[415px] "
+                          width={415}
+                          height={270}
                         />
                       </div>
                     </motion.div>
