@@ -1,27 +1,27 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
 interface ModalReviewsState {
-	modalReviews: boolean;
-	reviewsCount: number;
-	loadingReviews: boolean;
-	setReviewsCount: (reviewsCount: number) => void;
-	openModalReviews: () => void;
-	closeModalReviews: () => void;
-	setLoadingReviews: (loadingReviews: boolean) => void;
+  modalReviews: boolean;
+  reviewsCount: number;
+  loadingReviews: boolean;
+  setReviewsCount: (reviewsCount: number) => void;
+  openModalReviews: () => void;
+  closeModalReviews: () => void;
+  setLoadingReviews: (loadingReviews: boolean) => void;
 }
 
 const useModalReviews = create<ModalReviewsState>((set) => ({
-	modalReviews: false,
-	reviewsCount: 2,
-	loadingReviews: false,
+  modalReviews: false,
+  reviewsCount: 2,
+  loadingReviews: false,
 
-	setReviewsCount: (reviewsCount) => set({ reviewsCount }),
+  setReviewsCount: (reviewsCount) => set({ reviewsCount }),
 
-	openModalReviews: () => set({ modalReviews: true }),
+  openModalReviews: () => set({ modalReviews: true }),
 
-	closeModalReviews: () => set({ modalReviews: false }),
+  closeModalReviews: () => set({ modalReviews: false }),
 
-	setLoadingReviews: (loadingReviews) => set({ loadingReviews }),
+  setLoadingReviews: (loadingReviews) => set({ loadingReviews }),
 }));
 
 export default useModalReviews;

@@ -11,7 +11,7 @@ import useMaterials from "@/store/Materials";
 import Footer from "@/modules/Footer";
 import Image from "next/image";
 
-const materialPage = () => {
+const MaterialPage = () => {
   const router = useRouter();
   const params = useParams();
   const { id } = params;
@@ -77,4 +77,4 @@ const materialPage = () => {
   );
 };
 
-export default materialPage;
+export default MaterialPage;

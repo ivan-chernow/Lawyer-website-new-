@@ -1,11 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Button, Link } from "react-scroll";
+import { Link } from "react-scroll";
 import { AnimatePresence, motion } from "motion/react";
 import useModalCall from "@/store/ModalCall";
 import BaseHeader from "@/components/BaseHeader";
 import ModalOrder from "@/components/ModalOrder";
 import PaginationSvg from "@/components/PaginationSvg";
+import Button from "@/components/Button/Button";
 
 const Header = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
