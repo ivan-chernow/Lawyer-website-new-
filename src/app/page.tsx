@@ -2,6 +2,7 @@ import About from "@/modules/About";
 import Clients from "@/modules/Clients";
 import Header from "@/modules/Header";
 import Lawyers from "@/modules/Lawyers";
+import Materials from "@/modules/Materials";
 import Services from "@/modules/Services";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Lawyers />
       <Clients />
+      <Materials />
     </div>
   );
 }
