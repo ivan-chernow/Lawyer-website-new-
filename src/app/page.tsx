@@ -1,5 +1,6 @@
 import About from "@/modules/About";
 import Clients from "@/modules/Clients";
+import Footer from "@/modules/Footer";
 import Header from "@/modules/Header";
 import Lawyers from "@/modules/Lawyers";
 import Materials from "@/modules/Materials";
@@ -14,6 +15,7 @@ export default function Home() {
       <Lawyers />
       <Clients />
       <Materials />
+      <Footer />
     </div>
   );
 }
