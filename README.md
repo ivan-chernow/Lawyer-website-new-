@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Правозащитник — юридическая компания
 
-## Getting Started
+Веб-сайт юридической компании "Правозащитник". Проект реализован на Next.js с использованием Tailwind CSS для стилизации и современных React-подходов.
 
-First, run the development server:
+## Описание
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Сайт предназначен для презентации юридических услуг, команды специалистов, отзывов клиентов и публикации полезных материалов. Адаптивный дизайн обеспечивает корректное отображение на различных устройствах.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Основные разделы:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Главная страница** — краткая информация о компании, преимущества, основные услуги.
+- **Наши услуги** — карточки с описанием ключевых направлений юридической помощи.
+- **О компании** — подробная информация о компании, миссии и подходах.
+- **Наши юристы** — фотографии и краткая информация о специалистах компании.
+- **Отзывы клиентов** — реальные отзывы клиентов о работе компании.
+- **Полезные материалы** — статьи и новости из мира права.
+- **Контакты** — адрес, телефон, email, форма обратной связи.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Технологии
 
-## Learn More
+- **Next.js** — серверный рендеринг и маршрутизация
+- **React** — компонентный подход
+- **Tailwind CSS** — стилизация и адаптивность
+- **TypeScript** — типизация
+- **Zustand** — глобальное состояние
+- **Framer Motion** — анимации
 
-To learn more about Next.js, take a look at the following resources:
+## Структура проекта
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/components` — переиспользуемые компоненты (кнопки, линии, карточки и т.д.)
+- `src/modules` — крупные секции сайта (услуги, юристы, отзывы, материалы)
+- `src/data` — статические данные (услуги, материалы, юристы)
+- `src/store` — zustand store для управления состоянием
+- `src/app` — страницы и роутинг Next.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Запуск проекта
 
-## Deploy on Vercel
+1. Установите зависимости:
+   ```bash
+   npm install
+   # или
+   yarn install
+   ```
+2. Запустите проект в режиме разработки:
+   ```bash
+   npm run dev
+   # или
+   yarn dev
+   ```
+3. Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Настройка Tailwind CSS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Все кастомные значения (например, max-width, цвета, breakpoints) определены в `tailwind.config.ts`.
+- Глобальные стили и Tailwind-директивы подключены в `src/app/globals.css`.
+
+## Лицензия
+
+Проект предназначен для демонстрации и может быть использован как основа для корпоративных сайтов юридических компаний.
