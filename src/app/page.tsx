@@ -1,3 +1,11 @@
+import Header from "@/modules/Header";
+import Services from "@/modules/Services";
+
 export default function Home() {
-  return <div className="bg-red-500">Hello World</div>;
+  return (
+    <div>
+      <Header />
+      <Services />
+    </div>
+  );
 }
