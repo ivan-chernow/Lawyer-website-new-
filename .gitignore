@@ -1,4 +1,4 @@
-
+# node_modules и кэш менеджеров пакетов
 /node_modules
 /.pnp
 .pnp.*
@@ -8,33 +8,36 @@
 !.yarn/releases
 !.yarn/versions
 package-lock.json
-.idea
-# testing
-/coverage
 yarn.lock
-# next.js
+
+# IDE и редакторы
+.idea
+.vscode
+.DS_Store
+
+# Next.js build output
 /.next/
 /out/
 
-# production
+# Production build
 /build
 
-# misc
-.DS_Store
-*.pem
+# Coverage и тесты
+/coverage
 
-# debug
+# Логи
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# Конфиденциальные файлы
 .env*
+*.pem
 
-# vercel
+# Vercel deploy
 .vercel
 
-# typescript
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
