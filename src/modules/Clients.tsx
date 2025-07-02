@@ -5,10 +5,10 @@ import { clients } from "@/data/clients";
 import Button from "@/components/Button/Button";
 import { motion } from "framer-motion";
 import useModalReviews from "@/store/modalReviews";
+import Image from "next/image";
 
 const Clients = () => {
-  const { modalReviews, openModalReviews, reviewsCount, setReviewsCount } =
-    useModalReviews();
+  const { reviewsCount, setReviewsCount } = useModalReviews();
 
   const handleExpand = () => {
     setReviewsCount(clients.length);
@@ -69,10 +69,12 @@ const Clients = () => {
               transition={{ duration: 0.3, delay: index * 0.1 }}
             >
               <div className="flex items-center mb-[16px]">
-                <img
+                <Image
                   src={client.img}
                   alt={`${client.name} logo`}
                   className="w-[80px] h-[80px] mr-[24px] rounded-[100px] object-cover"
+                  width={80}
+                  height={80}
                 />
                 <div className="flex flex-col">
                   <p className="font-light text-[14px] mb-[4px]">

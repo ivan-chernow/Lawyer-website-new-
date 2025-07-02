@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 body {
-    background-color: #ffffff;
-    font-family: Nunito, sans-serif;
-    font-weight: 600;
-    color: #222222;
-    font-size: 16px;
+  background-color: #ffffff;
+  font-family: Nunito, sans-serif;
+  font-weight: 600;
+  color: #222222;
+  font-size: 16px;
 }
 .container {
-    @apply max-w-1280 mx-auto px-[10px]
+  @apply max-w-1280 mx-auto px-[10px];
 }

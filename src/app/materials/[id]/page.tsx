@@ -8,8 +8,8 @@ import Line from "@/components/Line";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import useMaterials from "@/store/Materials";
-import "@/section/Materials/Materials.scss";
 import Footer from "@/modules/Footer";
+import Image from "next/image";
 
 const materialPage = () => {
   const router = useRouter();
@@ -17,14 +17,7 @@ const materialPage = () => {
   const { id } = params;
   const material = materials.find((material) => material.id === id);
 
-  const {
-    setIsAnimating,
-    isAnimating,
-    setCountMaterials,
-    countMaterials,
-    setHovered,
-    hovered,
-  } = useMaterials();
+  const { setIsAnimating, setCountMaterials } = useMaterials();
 
   const handleShowAll = () => {
     router.back();
@@ -61,10 +54,13 @@ const materialPage = () => {
           <Line />
         </div>
         <div className="flex justify-center w-full">
-          <img
+          <Image
             src={material.img}
             alt="img"
             className="object-cover w-full h-auto mb-[15px]"
+            width={1150}
+            height={400}
+            priority
           />
         </div>
         <div className="flex justify-center items-center mb-[20px]">

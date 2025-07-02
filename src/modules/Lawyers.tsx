@@ -4,6 +4,7 @@ import { lawyers } from "@/data/lawyers";
 import Line from "@/components/Line";
 import HoveredStyles from "@/components/hoveredStyles";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const Lawyers = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -48,10 +49,12 @@ const Lawyers = () => {
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              <img
+              <Image
                 src={lawyer.img}
                 alt="img"
                 className="w-[312px] h-[320px] mb-[24px] object-cover"
+                width={312}
+                height={320}
               />
               <h4 className="font-bold mb-[10px]">{lawyer.name}</h4>
               <p className="font-light text-[14px]">{lawyer.job}</p>

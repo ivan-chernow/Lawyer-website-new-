@@ -1,5 +1,4 @@
 import React from 'react';
-import './Philanthropy.scss'
 
 const Philanthropy = () => {
 	return (

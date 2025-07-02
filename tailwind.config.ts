@@ -2,7 +2,7 @@ import type {Config} from "tailwindcss";
 
 export default {
 	content: [
-		"./src/section/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/modules/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
@@ -11,7 +11,7 @@ export default {
 			'480': '480px',
 			'768': '768px',
 			'1024': '1024px',
-			'1280': '1260px',
+			'1280': '1280px',
 			'1440': '1440px',
 		},
 		extend: {
@@ -25,7 +25,7 @@ export default {
 				'480': '480px',
 				'768': '768px',
 				'1024': '1024px',
-				'1280': '1260px',
+				'1280': '1280px',
 				'1440': '1440px',
 			},
 			fontSize: {
