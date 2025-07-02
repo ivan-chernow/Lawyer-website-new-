@@ -1,3 +1,4 @@
+import About from "@/modules/About";
 import Header from "@/modules/Header";
 import Services from "@/modules/Services";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <Header />
       <Services />
+      <About />
     </div>
   );
 }
