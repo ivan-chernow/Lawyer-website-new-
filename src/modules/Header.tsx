@@ -2,14 +2,14 @@
 import React, { useEffect, useState } from "react";
 import { Button, Link } from "react-scroll";
 import { AnimatePresence, motion } from "motion/react";
-import { useStore } from "zustand";
+import useModalCall from "@/store/ModalCall";
 import BaseHeader from "@/components/BaseHeader";
 import ModalOrder from "@/components/ModalOrder";
 import PaginationSvg from "@/components/PaginationSvg";
 
 const Header = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const { modalCall, openModal } = useStore();
+  const { modalCall, openModal } = useModalCall();
   const images = [
     "/img/Header/fon1.png",
     "/img/Header/fon2.jpg",
