@@ -26,7 +26,7 @@ const Materials = () => {
   return (
     <section className="py-[80px] bg-white materials" id="materials">
       <div className="container flex flex-col items-center">
-        <h2 className="text-[28px] mb-[13px] uppercase font-extrabold">
+        <h2 className="text-[28px] mb-[13px] uppercase font-extrabold text-center">
           Полезные материалы
         </h2>
         <Line />
@@ -35,7 +35,7 @@ const Materials = () => {
           нужно знать для защиты ваших интересов
         </p>
         <motion.ul
-          className="flex items-center   mb-10 gap-4 flex-wrap"
+          className="flex items-center   mb-10 gap-4 flex-wrap justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}

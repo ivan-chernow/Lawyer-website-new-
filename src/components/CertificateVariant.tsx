@@ -8,7 +8,7 @@ const CertificateVariant = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
-    <div className="flex  flex-col items-center justify-center certificate">
+    <div className="flex  flex-col items-center justify-center ">
       <h2 className="text-[26px] font-extrabold uppercase mb-[10px] text-center">
         Наши <span className="text-blue font-black">сертификаты</span>
       </h2>
@@ -19,7 +19,7 @@ const CertificateVariant = () => {
         Мы гордимся тем, что наша компания соответствует высочайшим стандартам
         качества и безопасности. Ознакомьтесь с нашими сертификатами:
       </p>
-      <ul className=" flex grid-cols-3 gap-8 flex-wrap">
+      <ul className=" flex grid-cols-3 gap-8 flex-wrap 1230:justify-center 1230:items-center 1230:gap-3">
         {certificates.map((cert, index) => (
           <motion.li
             className={`   flex flex-col  w-[380px] items-center justify-center min-h-[420px]  bg-white pb-[24px] ${

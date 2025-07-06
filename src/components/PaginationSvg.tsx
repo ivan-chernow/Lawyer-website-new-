@@ -13,7 +13,7 @@ const svgVariants = {
 
 const PaginationSvg = ({ currentImageIndex }: PaginationSvgProps) => {
   return (
-    <div className="relative">
+    <div className="block">
       <AnimatePresence mode="popLayout">
         <motion.div
           key={currentImageIndex}
@@ -30,7 +30,7 @@ const PaginationSvg = ({ currentImageIndex }: PaginationSvgProps) => {
               viewBox="0 0 28 40"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-[28px] h-[40px] absolute bottom-[56px] left-0"
+              className="w-[28px] h-[40px] "
             >
               <rect x="0" width="4" height="40" fill="#4F8FF0" />
               <rect x="12" y="16" width="4" height="24" fill="#E6E6E6" />
@@ -44,7 +44,7 @@ const PaginationSvg = ({ currentImageIndex }: PaginationSvgProps) => {
               viewBox="0 0 28 40"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-[28px] h-[40px] absolute bottom-[56px] left-0"
+              className="w-[28px] h-[40px] "
             >
               <rect x="12" width="4" height="40" fill="#4F8FF0" />
               <rect x="0" y="16" width="4" height="24" fill="#E6E6E6" />
@@ -58,7 +58,7 @@ const PaginationSvg = ({ currentImageIndex }: PaginationSvgProps) => {
               viewBox="0 0 28 40"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-[28px] h-[40px] absolute bottom-[56px] left-0"
+              className="w-[28px] h-[40px] "
             >
               <rect x="24" width="4" height="40" fill="#4F8FF0" />
               <rect x="12" y="16" width="4" height="24" fill="#E6E6E6" />

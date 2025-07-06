@@ -14,19 +14,19 @@ const Footer = () => {
     <div>
       <footer className="py-[80px] bg-[#222222] footer" id="contacts">
         <div className="container flex flex-col">
-          <div className="flex items-center justify-between mb-[96px] footer__flex-adaptive">
+          <div className="flex items-center justify-between mb-[45px] 1150:justify-center">
             <NavLink to="header">
               <Logo />
             </NavLink>
-            <p className="font-normal text-white max-w-[862px] footer_desc">
+            <p className="font-normal text-white max-w-[862px] footer_desc 1150:hidden">
               Предварительные выводы неутешительны: синтетическое тестирование,
               а также свежий взгляд на привычные вещи — безусловно открывает
               новые горизонты для экономической целесообразности принимаемых
               решений.
             </p>
           </div>
-          <div className="flex items-start justify-between footer__container">
-            <ul className="flex flex-col">
+          <div className="flex items-start justify-between 1150:flex-col 1150:items-center 1150:justify-center">
+            <ul className="flex flex-col 1150:mb-[25px]">
               <li className="flex items-center mb-[24px]">
                 <svg
                   width="32"
@@ -108,8 +108,8 @@ const Footer = () => {
                 </div>
               </li>
             </ul>
-            <ul className="flex flex-col">
-              <li className="font-bold text-[14px] text-white mb-[16px]">
+            <ul className="flex flex-col 1150:hidden">
+              <li className="font-bold text-[14px] text-white mb-[16px] 1150:mr-[10px]">
                 <NavLink
                   to="services"
                   smooth={true}
@@ -119,7 +119,7 @@ const Footer = () => {
                   Услуги
                 </NavLink>
               </li>
-              <li className="font-bold text-[14px] text-white mb-[16px] cursor-pointer">
+              <li className="font-bold text-[14px] text-white mb-[16px] cursor-pointer 1150:mr-[10px]">
                 <NavLink
                   to="about"
                   smooth={true}
@@ -129,7 +129,7 @@ const Footer = () => {
                   О компании
                 </NavLink>
               </li>
-              <li className="font-bold text-[14px] text-white mb-[16px] cursor-pointer">
+              <li className="font-bold text-[14px] text-white mb-[16px] cursor-pointer 1150:mr-[10px]">
                 <NavLink
                   to="about"
                   smooth={true}
@@ -139,7 +139,7 @@ const Footer = () => {
                   Сертификаты
                 </NavLink>
               </li>
-              <li className="font-bold text-[14px] text-white mb-[16px]">
+              <li className="font-bold text-[14px] text-white mb-[16px] 1150:mr-[10px]">
                 <NavLink
                   to="clients"
                   smooth={true}
@@ -149,7 +149,7 @@ const Footer = () => {
                   Отзывы
                 </NavLink>
               </li>
-              <li className="font-bold text-[14px] text-white mb-[16px] cursor-pointer">
+              <li className="font-bold text-[14px] text-white mb-[16px] cursor-pointer 1150:mr-[10px]">
                 <NavLink
                   to="materials"
                   smooth={true}
@@ -159,7 +159,7 @@ const Footer = () => {
                   Полезные материалы
                 </NavLink>
               </li>
-              <li className="font-bold text-[14px] text-white cursor-pointer">
+              <li className="font-bold text-[14px] text-white cursor-pointer ">
                 <Link
                   href="/philantropy"
                   className="hover:text-blue hover:transition-all"
@@ -168,7 +168,7 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-            <div className="flex flex-col items-start ">
+            <div className="flex flex-col items-start 1150:items-center 1150:justify-center">
               <div className="flex items-center mb-[16px]">
                 <Image
                   src="/img/Footer/footer-img.png"
@@ -186,7 +186,7 @@ const Footer = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-white font-normal text-[14px] mb-[24px] max-w-[424px] card_subtitle">
+              <p className="text-white font-normal text-[14px] mb-[24px] max-w-[424px] 1150:text-center 1150:max-w-[320px]">
                 Есть над чем задуматься: тщательные исследования конкурентов
                 разоблачены. Идейные соображения высшего порядка, а также
                 перспективное планирование играет{" "}
@@ -194,7 +194,7 @@ const Footer = () => {
               <Button
                 text="Задать вопрос юристу"
                 click={openModal}
-                className="bg-blue border-blue
+                className="bg-blue border-blue 
 						 			text-white hover:text-blue active:bg-gray-300 active:text-black active:border-gray-300 hover:bg-white mr-[24px]"
               />
             </div>
@@ -202,7 +202,7 @@ const Footer = () => {
         </div>
       </footer>
       <section className="bg-black">
-        <div className="container flex items-center justify-between py-[16px]">
+        <div className="container flex flex-wrap items-center justify-between py-[16px] 480:justify-center">
           <p className="font-normal text-[14px] text-white footer_defence">
             Все права защищены, 2025
           </p>

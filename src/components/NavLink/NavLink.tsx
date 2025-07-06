@@ -4,8 +4,14 @@ import { Link as ScrollLink } from "react-scroll/modules";
 import Link from "next/link";
 import { NavLinkProps } from "@/components/NavLink/types";
 
-export function NavLink({ to, children }: NavLinkProps) {
+export function NavLink({ to, children, onLinkClick }: NavLinkProps) {
   const pathname = usePathname();
+
+  const handleClick = () => {
+    if (onLinkClick) {
+      onLinkClick();
+    }
+  };
 
   if (pathname === "/") {
     return (
@@ -14,6 +20,7 @@ export function NavLink({ to, children }: NavLinkProps) {
         smooth={true}
         duration={500}
         className="hover:text-blue hover:transition-all cursor-pointer"
+        onClick={handleClick}
       >
         {children}
       </ScrollLink>
@@ -23,6 +30,7 @@ export function NavLink({ to, children }: NavLinkProps) {
     <Link
       href={`/#${to}`}
       className="hover:text-blue hover:transition-all cursor-pointer"
+      onClick={handleClick}
     >
       {children}
     </Link>

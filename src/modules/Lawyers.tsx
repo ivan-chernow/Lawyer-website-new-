@@ -10,7 +10,10 @@ const Lawyers = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
-    <section className="flex flex-col items-center bg-grey py-[80px] lawyers">
+    <section
+      className="flex flex-col items-center bg-grey py-[80px] "
+      id="lawyers"
+    >
       <h3 className="font-extrabold text-[28px] uppercase mb-[10px]">
         Наши юристы
       </h3>
@@ -21,11 +24,11 @@ const Lawyers = () => {
         юридические услуги, индивидуально подходя к каждому клиенту и эффективно
         решая любые юридические задачи. Ваши интересы — наша главная приоритет!
       </p>
-      <ul className="flex  justify-between flex-wrap ">
+      <ul className="flex  justify-between  items-center flex-wrap  1350:justify-center 1350:items-center 1350:gap-4">
         {lawyers.map((lawyer, index) =>
           hoveredCard === index ? (
             <motion.li
-              className="flex flex-col   items-center w-[312px] min-h-[320px] bg-white  drop-shadow-2xl mr-[24px]  justify-center"
+              className="flex flex-col items-center justify-center h-[423px]  w-[312px]  bg-white  drop-shadow-2xl  mr-[24px] 1350:mr-0 "
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
               key={index}
@@ -42,7 +45,7 @@ const Lawyers = () => {
             </motion.li>
           ) : (
             <motion.li
-              className="flex flex-col items-center min-h-[320px] w-[312px] bg-white pb-[24px] drop-shadow-2xl mr-[24px] "
+              className="flex flex-col h-auto items-center  w-[312px] bg-white pb-[24px] drop-shadow-2xl mr-[24px] 1350:mr-0"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
               key={index}

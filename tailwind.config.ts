@@ -8,11 +8,11 @@ export default {
   ],
   theme: {
     screens: {
-      "480": "480px",
-      "768": "768px",
-      "1024": "1024px",
-      "1280": "1280px",
-      "1440": "1440px",
+      "480": { max: "480px" },
+      "1018": { max: "1018px" },
+      "1150": { max: "1150px" },
+      "1230": { max: "1232px" },
+      "1350": { max: "1350px" },
     },
     extend: {
       backgroundImage: {

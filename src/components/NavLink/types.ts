@@ -6,4 +6,5 @@ export interface NavLinkProps {
   smooth?: boolean;
   duration?: number;
   className?: string;
+  onLinkClick?: () => void;
 }

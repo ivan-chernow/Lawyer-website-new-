@@ -27,7 +27,7 @@ const About = () => {
   return (
     <div className="bg-white py-[80px] about" id="about">
       <div className="container">
-        <div className="flex flex-col">
+        <div className="flex flex-col  1150:items-center 1150:justify-center ">
           {showContent === "about" && (
             <motion.div
               key="about"
@@ -64,9 +64,9 @@ const About = () => {
               <OurHistoryVariant />
             </motion.div>
           )}
-          <div className="btn-column">
+          <div className="btn-column 1150:mt-[30px] 480:flex-col 480:justify-center 480:items-center">
             {showContent === "about" ? (
-              <>
+              <div className=" 480:justify-center 480:items-center">
                 <Button
                   text="История компании"
                   click={() => handleButtonClick("history")}
@@ -77,7 +77,7 @@ const About = () => {
                   click={() => handleButtonClick("certificate")}
                   className="border-gray-300 border-[2px] bg-gray-300 border-solid text-black px-[24px] hover:bg-white active:bg-gray-300"
                 />
-              </>
+              </div>
             ) : (
               <div
                 className={`${
@@ -89,7 +89,7 @@ const About = () => {
                 <Button
                   text="Назад"
                   click={handleBackClick}
-                  className="bg-blue border-blue text-white hover:text-blue active:bg-gray-300 active:text-black active:border-gray-300 hover:bg-white mr-[24px] mt-[30px]"
+                  className="bg-blue border-blue text-white hover:text-blue active:bg-gray-300 active:text-black active:border-gray-300 hover:bg-white mr-[24px] mt-[30px] 1150:mr-0 1150:mt-0"
                 />
               </div>
             )}

@@ -30,7 +30,7 @@ const Clients = () => {
             viewBox="0 0 71 30"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-[70px] h-[28px]"
+            className="w-[70px] h-[28px] 480:hidden"
           >
             <path
               d="M14.3055 23.8334L5.97217 15.5L14.3055 7.16669L15.7847 8.64585L8.9305 15.5L15.7847 22.3542L14.3055 23.8334Z"
@@ -50,7 +50,7 @@ const Clients = () => {
             />
           </svg>
         </div>
-        <div className="flex justify-start">
+        <div className="flex justify-start 480:justify-center">
           <Line />
         </div>
         <motion.ul
@@ -87,7 +87,7 @@ const Clients = () => {
             </motion.li>
           ))}
         </motion.ul>
-        <div className="flex mt-[32px]">
+        <div className="flex mt-[32px] 1230:justify-center">
           {reviewsCount <= 2 && (
             <Button
               text="Все отзывы"

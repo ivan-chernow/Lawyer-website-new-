@@ -1,12 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-import { AnimatePresence, motion } from "motion/react";
 import useModalCall from "@/store/ModalCall";
 import BaseHeader from "@/components/BaseHeader";
 import ModalOrder from "@/components/ModalOrder";
 import PaginationSvg from "@/components/PaginationSvg";
 import Button from "@/components/Button/Button";
+import IconHeader from "@/components/IconHeader";
+import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Header = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -25,30 +27,9 @@ const Header = () => {
   }, [images.length]);
 
   return (
-    <header className="relative w-full h-[872px] bg-black z-1" id="header">
-      <div className="absolute inset-0 overflow-hidden w-full">
-        <AnimatePresence mode="popLayout">
-          <motion.div
-            key={currentImageIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.3, ease: "easeInOut" }}
-            className="absolute inset-0"
-          >
-            <motion.img
-              src={images[currentImageIndex]}
-              alt="слайдер"
-              className="w-full h-full object-cover object-right-top"
-              style={{ position: "absolute", top: 0, left: 0, zIndex: 0 }}
-            />
-            <div className="absolute inset-0 bg-black opacity-50" />
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
-      <div className="relative  bg-black ">
-        <div className="container flex items-center justify-between py-[16px]">
+    <header className="relative bg-black w-full z-1 " id="header">
+      <div className="relative bg-black">
+        <div className="container flex items-center justify-between py-[16px] flex-wrap 480:justify-center">
           <div className="flex items-center">
             <div className="flex justify-items-center mr-[24px]">
               <svg
@@ -101,59 +82,52 @@ const Header = () => {
           </button>
           {modalCall && <ModalOrder />}
         </div>
+        <BaseHeader />
       </div>
 
-      <BaseHeader />
-
-      <div className="relative  container">
-        <div className="flex flex-col pt-[150px] pb-[268px] items-center header_container">
-          <h2 className="text-white text-[30px] font-light mb-[8px] text-center uppercase ">
-            Оказываем весь комплекс
-          </h2>
-          <h3 className="text-blue text-[56px] mb-[8px] text-center uppercase ">
-            Юридических услуг
-          </h3>
-          <p className="text-white text-[20px] font-normal mb-[48px] text-center max-w-[1090px]">
-            С нами вы получите не только профессиональную правовую помощь, но и
-            уверенность в том, что ваши интересы находятся в надежных руках. Мы
-            нацелены на достижение максимальных результатов для каждого клиента.
-          </p>
-          <Link to="services" smooth={true} duration={700}>
-            <Button
-              text="Наши услуги"
-              className="bg-blue border-blue text-white hover:text-blue active:bg-gray-300 active:text-black active:border-gray-300 hover:bg-white"
+      <div className="relative w-full h-[700px] overflow-hidden 480:h-[400px]">
+        <AnimatePresence mode="popLayout">
+          <motion.div
+            key={currentImageIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.3, ease: "easeInOut" }}
+            className="absolute inset-0 w-full h-full"
+          >
+            <Image
+              src={images[currentImageIndex]}
+              alt="слайдер"
+              fill
+              className="object-cover object-center"
             />
-          </Link>
-        </div>
-        <PaginationSvg currentImageIndex={currentImageIndex} />
-        <svg
-          width="71"
-          height="31"
-          viewBox="0 0 71 31"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-[70px] h-[29px] group absolute bottom-[56px] right-0"
-        >
-          <path
-            d="M14.3055 24.3333L5.97217 16L14.3055 7.66663L15.7847 9.14579L8.9305 16L15.7847 22.8541L14.3055 24.3333Z"
-            fill="#E6E6E6"
-            className="group-hover:stroke-blue group-hover:fill-blue"
-          />
-          <line
-            x1="28.0734"
-            y1="29.9422"
-            x2="42.1012"
-            y2="1.18083"
-            stroke="#E6E6E6"
-            strokeWidth="2"
-            className="group-hover:stroke-blue group-hover:fill-blue"
-          />
-          <path
-            className="group-hover:stroke-blue group-hover:fill-blue"
-            d="M57.6874 24.3333L56.2083 22.8541L63.0624 16L56.2083 9.14579L57.6874 7.66663L66.0208 16L57.6874 24.3333Z"
-            fill="#E6E6E6"
-          />
-        </svg>
+            <div className="absolute inset-0 bg-black opacity-50 z-10" />
+            <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 pt-8 pb-24">
+              <h2 className="text-white text-[30px] font-light mb-[8px] text-center uppercase 480:text-[24px] 480:mb-0">
+                Оказываем весь комплекс
+              </h2>
+              <h3 className="text-blue text-[32px] sm:text-[56px] mb-[8px] text-center uppercase 480:text-[24px]">
+                Юридических услуг
+              </h3>
+              <p className="text-white text-[16px] sm:text-[20px] font-normal mb-[24px] sm:mb-[48px] text-center max-w-[1090px] 480:text-[14px] 480:mb-[10px]">
+                С нами вы получите не только профессиональную правовую помощь,
+                но и уверенность в том, что ваши интересы находятся в надежных
+                руках. Мы нацелены на достижение максимальных результатов для
+                каждого клиента.
+              </p>
+              <Link to="services" smooth={true} duration={700}>
+                <Button
+                  text="Наши услуги"
+                  className="bg-blue border-blue text-white hover:text-blue active:bg-gray-300 active:text-black active:border-gray-300 hover:bg-white"
+                />
+              </Link>
+            </div>
+            <div className="container absolute bottom-4 left-1/2 transform -translate-x-1/2  max-w-4xl flex items-center justify-between px-4 sm:px-8 z-20">
+              <PaginationSvg currentImageIndex={currentImageIndex} />
+              <IconHeader />
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </header>
   );

@@ -15,7 +15,7 @@ export default function BurgerMenu() {
   };
 
   return (
-    <div>
+    <div className="block ">
       <button onClick={toggleMenu} className="p-2 focus:outline-none">
         {isOpen ? (
           <RxCross2 className="w-[40px] h-[40px] text-white" />
@@ -40,26 +40,38 @@ export default function BurgerMenu() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="fixed top-0 left-0 h-full w-64 bg-gray-400 shadow-lg z-50"
+              className="fixed top-0 left-0 h-full w-64 bg-gray-300 shadow-lg z-50"
             >
-              <ul className="flex flex-col items-start p-6">
+              <ul className="flex flex-col items-start p-6 text-black">
                 <li className="menu-item">
-                  <NavLink to="services">Услуги</NavLink>
+                  <NavLink to="services" onLinkClick={closeMenu}>
+                    Услуги
+                  </NavLink>
                 </li>
                 <li className="menu-item">
-                  <NavLink to="about">О компании</NavLink>
+                  <NavLink to="about" onLinkClick={closeMenu}>
+                    О компании
+                  </NavLink>
                 </li>
                 <li className="menu-item">
-                  <NavLink to="lawyers">Наши юристы</NavLink>
+                  <NavLink to="lawyers" onLinkClick={closeMenu}>
+                    Наши юристы
+                  </NavLink>
                 </li>
                 <li className="menu-item">
-                  <NavLink to="clients">Отзывы</NavLink>
+                  <NavLink to="clients" onLinkClick={closeMenu}>
+                    Отзывы
+                  </NavLink>
                 </li>
                 <li className="menu-item">
-                  <NavLink to="materials">Новости</NavLink>
+                  <NavLink to="materials" onLinkClick={closeMenu}>
+                    Новости
+                  </NavLink>
                 </li>
-                <li className="menu-item">
-                  <NavLink to="contacts">Контакты</NavLink>
+                <li className="menu-item ">
+                  <NavLink to="contacts" onLinkClick={closeMenu}>
+                    Контакты
+                  </NavLink>
                 </li>
               </ul>
             </motion.div>
